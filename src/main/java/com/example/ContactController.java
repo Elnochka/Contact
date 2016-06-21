@@ -41,8 +41,7 @@ public class ContactController {
         List<Contact> contact = repo.findByNameNotLike(nameFilter);
 
         for (Contact customer : contact) {
-            //if (ssn.matches("^(\\d{3}-?\\d{2}-?\\d{4})$")) {
-                //   System.out.println("Found good SSN: " + ssn);
+            
            // if (customer.getName().matches("^t.*$")) {
                 list.add(customer);
            // }
