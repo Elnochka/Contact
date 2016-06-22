@@ -18,14 +18,14 @@ public class ContactController {
 
 
         @Autowired
-        private ContactRepository repo;
+        private ContactRepository repository;
 
         @RequestMapping("/contacts/read")
         @ResponseBody
         public List<Contact> readContact() {
             List<Contact> list = new CopyOnWriteArrayList<Contact>();
 
-            Iterable<Contact> contact = repo.findAll();
+            Iterable<Contact> contact = repository.findAll();
             for (Contact customer : contact) {
                 list.add(customer);
             }
@@ -38,10 +38,10 @@ public class ContactController {
     public List<Contact> filtrContact(@RequestParam(value="nameFilter", required=false) String nameFilter) {
         List<Contact> list = new CopyOnWriteArrayList<Contact>();
 
-        List<Contact> contact = repo.findByNameNotLike(nameFilter);
+        List<Contact> contact = repository.findByNameNotLike(nameFilter);
 
         for (Contact customer : contact) {
-            
+
            // if (customer.getName().matches("^t.*$")) {
                 list.add(customer);
            // }
