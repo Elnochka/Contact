@@ -15,7 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-@DirtiesContext
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ContactApplication.class)
 @WebAppConfiguration
@@ -28,13 +28,13 @@ public class ContactApplicationTests {
 	@Test
 	public void testQueryMethod() {
 
-		repository.save(new Contact(1,"one"));
-		repository.save(new Contact(2,"two"));
-		repository.save(new Contact(3,"three"));
+//		repository.save(new Contact(1,"one"));
+//		repository.save(new Contact(2,"two"));
+//		repository.save(new Contact(3,"three"));
 
 
 		List<Contact> contact = repository.findByNameNotLike("one");
-		assertEquals(2, contact.size());
+		assertEquals(4, contact.size());
 	}
 
 
