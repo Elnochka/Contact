@@ -1,12 +1,12 @@
 language: java
-#sudo: false
-#script: mvn clean verify
+sudo: false
+script: mvn clean verify
 services:
   - mysql
 jdk:
   - oraclejdk8
 before_script:
-  - mysql -e 'create database contact_db;'
+  - mysql -e 'create database exampl;'
 cache:
   directories:
     - '$HOME/.m2/repository'
