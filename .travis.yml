@@ -5,5 +5,9 @@ services:
   - mysql
 jdk:
   - oraclejdk8
-
+test:
+  adapter: mysql5.5
+  database: exampl
+  username: root
+  encoding: utf8
 
