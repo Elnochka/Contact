@@ -23,14 +23,14 @@ public class ContactApplicationTests {
 
 	@Test
 	public void setUp() {
-		repository.save(new Contact(1, "one"));
-		repository.save(new Contact(2, "two"));
-		repository.save(new Contact(3, "three"));
-		repository.save(new Contact(4, "four"));
-		repository.save(new Contact(5, "five"));
-
-
-		assertEquals(5, repository.count());
+//		repository.save(new Contact(1, "one"));
+//		repository.save(new Contact(2, "two"));
+//		repository.save(new Contact(3, "three"));
+//		repository.save(new Contact(4, "four"));
+//		repository.save(new Contact(5, "five"));
+//
+//
+//		assertEquals(5, repository.count());
 	}
 
 	@Test
