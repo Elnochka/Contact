@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 @WebAppConfiguration
 
 public class ContactApplicationTests {
-	@Autowired
+	//@Autowired
 	ContactRepository repository;
 
 
@@ -31,7 +31,7 @@ public class ContactApplicationTests {
 		repository.save(new Contact(1,"one"));
 		repository.save(new Contact(2,"two"));
 		repository.save(new Contact(3,"three"));
-		
+
 
 		List<Contact> contact = repository.findByNameNotLike("one");
 		assertEquals(2, contact.size());
