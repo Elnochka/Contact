@@ -5,5 +5,5 @@ services:
   - mysql
 jdk:
   - oraclejdk8
-  - oraclejdk7
+
 

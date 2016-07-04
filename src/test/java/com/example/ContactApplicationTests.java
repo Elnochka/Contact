@@ -21,8 +21,8 @@ public class ContactApplicationTests {
 	ContactRepository repository;
 
 
-	@Test
-	public void setUp() {
+//	@Test
+//	public void setUp() {
 //		repository.save(new Contact(1, "one"));
 //		repository.save(new Contact(2, "two"));
 //		repository.save(new Contact(3, "three"));
@@ -31,7 +31,7 @@ public class ContactApplicationTests {
 //
 //
 //		assertEquals(5, repository.count());
-	}
+//	}
 
 	@Test
 	public void testQueryMethod() {
