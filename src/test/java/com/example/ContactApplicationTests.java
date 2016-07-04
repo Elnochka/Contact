@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -14,6 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.junit.Assert.assertEquals;
 
+@DirtiesContext
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ContactApplication.class)
 @WebAppConfiguration
@@ -23,22 +25,16 @@ public class ContactApplicationTests {
 	ContactRepository repository;
 
 
-
-
 	@Test
 	public void testQueryMethod() {
 
+		repository.save(new Contact(1,"one"));
+		repository.save(new Contact(2,"two"));
+		repository.save(new Contact(3,"three"));
+		
 
-		//List<Contact> list = new CopyOnWriteArrayList<Contact>();
-
-		//Iterable<Contact> contact = repository.findAll();
 		List<Contact> contact = repository.findByNameNotLike("one");
-
-//		for (Contact customer : contact) {
-//
-//			list.add(customer);
-//		}
-		assertEquals(4, contact.size());
+		assertEquals(2, contact.size());
 	}
 
 
