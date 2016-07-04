@@ -1,16 +1,16 @@
 language: java
-#sudo: false
+sudo: false
 jdk:
   - oraclejdk8
 #services:
 #  - mysql
-#cache:
-#  directories:
-#  - '$HOME/.m2/repository'
+cache:
+  directories:
+  - '$HOME/.m2/repository'
 before_script:
-  - mysql -e 'create database exampl_db;'
+  - mysql -e 'create database exampl;'
 #  - mysql exampl_db < exampl.sql
-#script: mvn clean verify
+script: mvn clean verify
 #after_script:
 #  - mysql -e 'DROP DATABASE exampl_db;'
 
