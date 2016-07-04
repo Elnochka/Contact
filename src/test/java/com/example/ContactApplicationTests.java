@@ -43,7 +43,7 @@ public class ContactApplicationTests {
 		for (Contact customer : contact) {
 			list.add(customer);
 		}
-		assertEquals(5, list.size());
+		assertEquals(0, list.size());
 	}
 
 
