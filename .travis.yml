@@ -4,9 +4,10 @@ jdk:
   - oraclejdk8
 services:
   - mysql
-before_script:
-  - mysql -e 'create database exampl;'
-script: mvn clean verify
 cache:
   directories:
-    - '$HOME/.m2/repository'
+  - '$HOME/.m2/repository'
+before_script:
+  - mysql -e 'create database exampl_db;'
+script: mvn clean verify
+
