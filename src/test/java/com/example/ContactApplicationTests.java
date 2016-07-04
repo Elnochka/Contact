@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 @WebAppConfiguration
 
 public class ContactApplicationTests {
-	//@Autowired
+	@Autowired
 	ContactRepository repository;
 
 
