@@ -29,13 +29,16 @@ public class ContactApplicationTests {
 	public void testQueryMethod() {
 
 
-//		List<Contact> list = new CopyOnWriteArrayList<Contact>();
-//
-//		Iterable<Contact> contact = repository.findAll();
+		//List<Contact> list = new CopyOnWriteArrayList<Contact>();
+
+		//Iterable<Contact> contact = repository.findAll();
+		List<Contact> contact = repository.findByNameNotLike("one");
+
 //		for (Contact customer : contact) {
+//
 //			list.add(customer);
 //		}
-//		assertEquals(5, list.size());
+		assertEquals(4, contact.size());
 	}
 
 
