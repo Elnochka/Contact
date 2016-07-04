@@ -5,10 +5,8 @@ services:
   - mysql
 jdk:
   - oraclejdk8
-  - oraclejdk7
-test:
-  adapter: mysql5.5
-  database: exampl
-  username: root
-  encoding: utf8
-
+before_script:
+  - mysql -e 'create database contact_db;'
+cache:
+  directories:
+    - '$HOME/.m2/repository'
