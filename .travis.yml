@@ -9,8 +9,8 @@ cache:
   - '$HOME/.m2/repository'
 before_script:
   - mysql -e 'create database exampl;'
-  - mysql -u root exampl < exampl.sql
+#  - mysql -u root exampl < exampl.sql
 script: mvn clean verify
-after_script:
-  - mysql -e 'DROP DATABASE exampl_db;'
+#after_script:
+#  - mysql -e 'DROP DATABASE exampl_db;'
 
