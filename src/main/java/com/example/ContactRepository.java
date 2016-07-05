@@ -11,9 +11,10 @@ import java.util.List;
  */
 public interface ContactRepository extends JpaRepository<Contact, String> {
 
-        List<Contact> findByNameLike(String name);
+    List<Contact> findByNameLike(String name);
 
     List<Contact> findByNameNotLike(String name);
+    List<Contact> findByNameNotContaining(String name);
 
-        List<Contact> findByNameStartingWith(String name);
+    List<Contact> findByNameStartingWith(String name);
 }

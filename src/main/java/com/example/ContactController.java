@@ -36,18 +36,18 @@ public class ContactController {
     @RequestMapping(value="/contacts")
     @ResponseBody
     public List<Contact> filtrContact(@RequestParam(value="nameFilter", required=false) String nameFilter) {
-        List<Contact> list = new CopyOnWriteArrayList<Contact>();
+//        List<Contact> list = new CopyOnWriteArrayList<Contact>();
 
-        List<Contact> contact = repository.findByNameNotLike(nameFilter);
+        List<Contact> contact = repository.findByNameNotContaining(nameFilter);
 
-        for (Contact customer : contact) {
+//        for (Contact customer : contact) {
+//
+//           // if (customer.getName().matches("^t.*$")) {
+//                list.add(customer);
+//           // }
+//
+//        }
 
-           // if (customer.getName().matches("^t.*$")) {
-                list.add(customer);
-           // }
-
-        }
-
-        return list;
+        return contact;
     }
 }

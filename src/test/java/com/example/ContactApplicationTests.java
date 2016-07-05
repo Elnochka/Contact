@@ -34,7 +34,7 @@ public class ContactApplicationTests {
 
 
 		List<Contact> contact = repository.findByNameNotLike("one");
-		assertEquals(4, contact.size());
+		assertEquals(0, contact.size());
 	}
 
 
